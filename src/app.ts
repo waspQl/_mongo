@@ -9,10 +9,9 @@ if (
     parseInt(process.argv[2])
   )
 ) port = parseInt(process.argv[2])
-// mongoへの接続確認用データベース
-const dbname = 'admin'
+const url = 'mongodb://127.0.0.1:' + port + '/'
 
-MongoClient.connect('mongodb://127.0.0.1:' + port + '/' + dbname, (err, db) => {
+MongoClient.connect(url, (err, db) => {
   if (err === null) {
     console.log("Connected successfully to mongo server")
   } else {
