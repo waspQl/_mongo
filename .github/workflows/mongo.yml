@@ -27,7 +27,7 @@ jobs:
 
     - run: npm install
     - name: npm test
-    - run: |
+      run: |
         export PORT=${{ matrix.mongodb-port }}
         npm test
       env:
