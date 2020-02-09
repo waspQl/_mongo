@@ -2,7 +2,7 @@
   "name": "root",
   "scripts": {
     "lint": "eslint --ext .js,.ts .",
-    "test": "if npx ts-node src/app.ts ${port} 2> /dev/null | grep -xs 'Connected successfully to mongo server'; then echo Success; else echo Error && exit 1; fi"
+    "test": "if npx ts-node src/app.ts ${PORT} 2> /dev/null | grep -xs 'Connected successfully to mongo server'; then echo Success; else echo Error && exit 1; fi; unset PORT"
   },
   "dependencies": {},
   "devDependencies": {
